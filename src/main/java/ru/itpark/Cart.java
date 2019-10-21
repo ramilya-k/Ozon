@@ -4,8 +4,8 @@ public class Cart {
     private int price;
     private int discount;
     private int itemCount;
-    private int sizeMassive = 15;
-    private Product[] addCart = new Product[sizeMassive];
+    private int length = 15;
+    private Product[] addCart = new Product[length];
 
 
     public void add(Product product) {
