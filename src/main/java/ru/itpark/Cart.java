@@ -5,16 +5,16 @@ public class Cart {
     private int discount;
     private int itemCount;
     private int length = 15;
-    private Product[] addCart = new Product[length];
+    private Product[] items = new Product[length];
 
 
     public void add(Product product) {
         int index = product.getIndex();
-        if (addCart[index] == null) {
-            addCart[index] = product;
-            price += addCart[index].getPrice();
-            discount += addCart[index].getPriceWithDiscount();
-            addCart[index] = null;
+        if (items[index] == null) {
+            items[index] = product;
+            price += items[index].getPrice();
+            discount += items[index].getPriceWithDiscount();
+            items[index] = null;
             itemCount++;
         }
     }
@@ -22,10 +22,10 @@ public class Cart {
 
     public void remove(Product product) {
         int index = product.getIndex();
-        if (addCart[index] != null) {
-            price -= addCart[index].getPrice();
-            discount -= addCart[index].getPriceWithDiscount();
-            addCart[index] = null;
+        if (items[index] != null) {
+            price -= items[index].getPrice();
+            discount -= items[index].getPriceWithDiscount();
+            items[index] = null;
             itemCount--;
         }
     }
