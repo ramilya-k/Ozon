@@ -14,7 +14,6 @@ public class Cart {
             items[index] = product;
             price += items[index].getPrice();
             discount += items[index].getPriceWithDiscount();
-            items[index] = null;
             itemCount++;
         }
     }
